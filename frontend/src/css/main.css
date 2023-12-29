@@ -1,0 +1,141 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box
+}
+
+.users-table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 0px;
+}
+
+.users-table-cell {
+    border: 1px solid black;
+}
+
+.title{
+    font-size: 30px; 
+    line-height: 36px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.create-user-icon{
+    color: skyblue ;
+    font-size: 36px ;
+    line-height:  40px ;
+}
+
+.home-content{
+    padding: 4px;
+}
+
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.backButton-flex{
+    display: flex;
+}
+
+.backButton-Link{
+    background-color: rgb(7 89 133);
+    color: white;
+    padding: 1px 4px;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+
+.spinner{
+    width: 16px;
+    height: 16px;
+    margin: 8px;
+    border-radius: 25px;
+    background-color: rgb(123, 160, 224);
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+
+    @keyframes ping {
+        75%, 100% {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+}
+
+.user-operations{
+    display: flex;
+    justify-content: center;
+    column-gap: 4px;
+}
+
+.user-operation {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.user-operation-details {
+    color: green;
+}
+
+.user-operation-edit {
+    color: yellow;
+}
+
+.user-operation-delete {
+    color: red;
+}
+
+.user-info{
+    padding: 4px;
+}
+
+.user-details-flex{
+    display: flex;
+    flex-direction:column;
+    border-width: 2px;
+    border-color: rgb(56 189 248); 
+    border-radius: 12px;
+    width: 100%;
+    padding: 4px;
+}
+
+.register-user{
+    display: flex;
+    flex-direction:column;
+    border-width: 2px;
+    border-color: rgb(56 189 248); 
+    border-radius: 12px;
+    width: 600px;
+    padding: 4px;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.top-bottom-margin {
+    margin: 4px 0;
+}
+
+.user-details-cell{
+    font-size:  20px;
+    line-height:  28px;
+    margin-right: 4px;
+    color: rgb(107 114 128);
+}
+
+.user-input{
+    border: 2px solid gray;
+    padding: 2px 4px;
+    width: 100%;
+}
+
+.submit-button{
+    padding:2px;
+    margin: 8px;
+    background-color: skyblue;
+    
+}
