@@ -38,6 +38,24 @@
     align-items: center;
 }
 
+.gap-container{
+    row-gap: 16px;
+}
+
+.card-button{
+    background-color: rgb(125 211 252);
+    padding: 1px 4px;
+    border-radius: 8px;
+}
+
+.card-button:hover{
+    background-color: rgb(2 132 199);
+}
+
+.aling-center{
+    align-items: center;
+}
+
 .backButton-flex{
     display: flex;
 }
@@ -67,6 +85,68 @@
     }
 }
 
+.grid-container{
+    display: grid;
+    
+}
+
+@media (min-width: 640px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.grid-cell{
+    border-radius: 12px;
+    position: relative;
+    padding:4px 4px;
+    margin: 4px;
+    border:2px solid black
+}
+
+.grid-cell:hover{
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.grid-cell-title{
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    padding: 1px 4px;
+    margin: 2px;
+    background-color: rgb(252 165 165);
+    border-radius: 8px;
+}
+
+.grid-cell-subtitle{
+    margin: 2px;
+    color: lightgray;
+}
+
+.user-card{
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    column-gap: 2px;
+}
+
+.user-card-links{
+    column-gap:2px ;
+    margin-top: 4px;
+}
+
 .user-operations{
     display: flex;
     justify-content: center;
@@ -76,6 +156,10 @@
 .user-operation {
     font-size: 24px;
     line-height: 32px;
+}
+
+.user-operation:hover{
+    color: black
 }
 
 .user-operation-details {
@@ -130,6 +214,13 @@
 .user-input{
     border: 2px solid gray;
     padding: 2px 4px;
+    width: 100%;
+}
+
+.delete-button{
+    background-color:red;
+    color: white;
+    margin: 8px;
     width: 100%;
 }
 

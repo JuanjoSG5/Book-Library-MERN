@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import BackButton from '../components/BackButton'
-import Spinner from '../components/Spinner'
+import BackButton from '../../components/BackButton'
+import Spinner from '../../components/Spinner'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
@@ -8,6 +8,7 @@ const CreateUser = () => {
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+	const [admin, setAdmin] = useState('')
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
     const createNewUser = () => {
@@ -15,6 +16,7 @@ const CreateUser = () => {
             username,
             email,
             password,
+			admin
         };
         setLoading(true)
         axios
@@ -60,6 +62,15 @@ const CreateUser = () => {
 				value={password}
 				onChange={(e) => setPassword(e.target.value)}
 				className='user-input'
+				/>
+			</div>
+			
+			<div className='top-bottom-margin'>
+				<label className='user-details-cell'>Admin</label>
+				<input
+					type='checkbox'
+					checked={admin}
+					onChange={(e) => setAdmin(e.target.checked)}
 				/>
 			</div>
 			<button className='submit-button' onClick={createNewUser}>

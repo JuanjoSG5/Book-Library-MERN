@@ -1,9 +1,9 @@
 import React from 'react'
 import { useEffect,useState } from 'react'
 import { useParams } from 'react-router-dom'
-import BackButton from '../components/BackButton'
+import BackButton from '../../components/BackButton'
 import axios from 'axios'
-import Spinner from '../components/Spinner'
+import Spinner from '../../components/Spinner'
 
 const ShowUser = () => {
     const [user,setUser] = useState({})
@@ -45,7 +45,7 @@ const ShowUser = () => {
                         </div>
                         <div className='top-bottom-margin'>
                             <span className='user-details-cell'>Rol</span>
-                            <span>To be Implemented</span>
+                            <span>{user.admin ? 'admin' : 'user'}</span>
                         </div>
                         
 
