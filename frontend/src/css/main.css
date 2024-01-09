@@ -35,6 +35,15 @@
     margin: 24px 24px;
 }
 
+.item-margin {
+    display: block;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
 /* Container for the book items */
 .book-container {
     display: flex;
