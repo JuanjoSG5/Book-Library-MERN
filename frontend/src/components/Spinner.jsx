@@ -1,8 +1,13 @@
 import React from 'react';
-import '../css/main.css';
+import Spinner from '../images/loader.svg';
+import "../css/main.css";
 
-const Spinner = () => {
-  return <div className="spinner">  </div>;
-};
+const Loader = () => {
+  return (
+    <div className='loader flex flex-c'>
+      <img src = {Spinner} alt = "loader" />
+    </div>
+  )
+}
 
-export default Spinner;
+export default Loader

@@ -31,6 +31,32 @@
     padding: 4px;
 }
 
+.border-margin {
+    margin: 24px 24px;
+}
+
+/* Container for the book items */
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+  
+  .book-card {
+    width: 200px; /* Adjust the width of each card as needed */
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Additional styling for book images within the card */
+  .book-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
 
 .flex-container{
     display: flex;
@@ -69,20 +95,11 @@
 }
 
 
-.spinner{
-    width: 16px;
-    height: 16px;
-    margin: 8px;
-    border-radius: 25px;
-    background-color: rgb(123, 160, 224);
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-
-    @keyframes ping {
-        75%, 100% {
-            transform: scale(2);
-            opacity: 0;
-        }
-    }
+.loader{
+    padding: 4rem 0;
+}
+.loader img{
+    width: 120px;
 }
 
 .grid-container{
