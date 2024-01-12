@@ -1,0 +1,33 @@
+.book-content {
+    margin: 24px;
+}
+
+.book-content-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+    padding: 8px;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+
+.book-details-img{
+    margin-right: 18vh;
+    padding-left: 8px;
+    align-items: center;
+    width: 24vw;
+    
+}
+
+.book-details-item{
+    display: block;
+    padding:2px;
+    
+}
+
+.book-details-content{
+    font-size: 2.5vh;
+    width: 66%;
+}

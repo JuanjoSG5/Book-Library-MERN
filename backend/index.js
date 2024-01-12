@@ -23,7 +23,6 @@ app.use('/users', userRoute)
 mongoose
     .connect(MongoDBURL)
     .then(() => {
-        console.log("Connected");
         app.listen(PORT, () => {
             console.log("listening");
         });

@@ -5,7 +5,7 @@ import { useCallback } from 'react';
 const URL = "http://openlibrary.org/search.json?title=";
 
 // Create a React context for managing global state
-const AppContext = React.createContext();
+const AppContext =   React.createContext();
 
 // AppProvider component responsible for managing the global state
 const AppProvider = ({ children }) => {
@@ -30,7 +30,6 @@ const AppProvider = ({ children }) => {
             // Map the retrieved data to a simplified book format
             newBooks = docs
                 ? docs
-                    .slice(0, 20)
                     .map((bookSingle) => {
                         const { key, author_name, cover_i, edition_count, first_publish_year, title } = bookSingle;
                         return {

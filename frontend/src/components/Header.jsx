@@ -1,16 +1,17 @@
 import React from 'react';
 import SearchBar from "../components/SearchBar.jsx";
 
+import Navbar from './Navbar.jsx';
 const Header = () => {
   return (
     <div className='holder'>
-        <header>
+          <Navbar/>
             <div >
-                <h2>find your book of choice.</h2><br />
+                <h2>Find your book of choice.</h2><br />
                 <p>This is just some random text that will be displayed explaining how does the search bar work </p>
                 <SearchBar />
             </div>
-        </header>
+        
     </div>
   )
 }

@@ -4,9 +4,7 @@ import "../css/main.css";
 
 const Loader = () => {
   return (
-    <div className='loader flex flex-c'>
-      <img src = {Spinner} alt = "loader" />
-    </div>
+    <div className="loader">Loading...</div>
   )
 }
 

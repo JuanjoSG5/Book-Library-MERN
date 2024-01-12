@@ -6,6 +6,8 @@ import { MdOutlineDelete, MdOutlineAddBox } from 'react-icons/md'
 import './../../css/main.css';
 
 const UserTable = ({ users }) => {
+
+    // TODO there is a bug in the code where after creating a new admin user it doesn't display in the table 
     return (
         <table className='users-table'>
             <thead>

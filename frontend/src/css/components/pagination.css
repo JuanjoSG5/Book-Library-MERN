@@ -1,0 +1,26 @@
+/* pagination.css */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.pagination-list li {
+    margin: 0 5px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pagination-list li.active {
+    background-color: #007bff;
+    color: #fff;
+}

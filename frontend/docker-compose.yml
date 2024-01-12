@@ -1,0 +1,14 @@
+version: '3'
+services:
+  node-app:
+    image: node:latest
+    container_name: my-node-app
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    working_dir: /usr/src/app
+    command: "npm start"
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development

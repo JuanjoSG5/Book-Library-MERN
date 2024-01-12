@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Spinner from '../../components/Spinner';
-import { Link } from 'react-router-dom';
-import { AiOutlineEdit } from 'react-icons/ai';
-import { BsInfoCircle } from 'react-icons/bs';
-import { MdOutlineDelete, MdOutlineAddBox } from 'react-icons/md'
 import './../../css/main.css';
 
-import UserTable from '../../components/home/UserTable';
-import UserCard from '../../components/home/UserCard';
+import UserTable from '../../components/user/UserTable';
+import UserCard from '../../components/user/UserCard';
+import RegisterButton from '../../components/RegisterButton';
 
 const UserList = () => {
     const [users, setUsers] = useState([])
@@ -45,12 +42,7 @@ const UserList = () => {
                 </button>
             </section>
 
-            <section className='flex-container'>
-                <h1 className='title'>User list</h1>
-                <Link to='/login'>
-                    <MdOutlineAddBox className='create-user-icon' />
-                </Link>
-            </section>
+            <RegisterButton/>
             {
                 loading
                     ? <Spinner />

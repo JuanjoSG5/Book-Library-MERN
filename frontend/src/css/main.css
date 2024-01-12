@@ -1,3 +1,12 @@
+@import url("./components/logOut.css");
+@import url("./components/logIn.css");
+@import url("./components/register.css");
+@import url("./components/spinner.css");
+@import url("./pages/contact.css");
+@import url("./components/pagination.css");
+@import url("./components/searchBar.css");
+@import url("./components/contact.css");
+
 * {
 	margin:0;
 	padding:0;
@@ -21,10 +30,19 @@
     margin-bottom: 8px;
 }
 
-.create-user-icon{
-    color: skyblue ;
+.icon{
     font-size: 36px ;
     line-height:  40px ;
+    margin: 8px;
+}
+
+.icon-log-out{
+    color: crimson;
+}
+
+.icon-log-in{
+    color: skyblue ;
+    
 }
 
 .home-content{
@@ -40,6 +58,7 @@
 }
 
 .link{
+    position: relative;
     text-decoration: none;
     color: black;
 }
@@ -53,7 +72,7 @@
   }
   
   .book-card {
-    width: 200px; /* Adjust the width of each card as needed */
+    width: 15vw; /* Adjust the width of each card as needed */
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
@@ -62,8 +81,8 @@
   
   /* Additional styling for book images within the card */
   .book-card img {
-    max-width: 100%;
-    height: auto;
+    max-width: 10vw;
+    height: 30vh;
   }
   
 
@@ -91,12 +110,31 @@
     align-items: center;
 }
 
-.backButton-flex{
+.backButton-flex {
     display: flex;
+    align-items: flex-start; /* Align items to the start (left) of the container */
+    margin-right:80vw;
 }
 
-.backButton-Link{
-    background-color: rgb(7 89 133);
+.backButton{
+    border: 2px solid rgb(181, 181, 181);
+    border-radius: 18px;
+    color: black;
+    background-color: rgb(240, 240, 240); 
+    text-align: center;
+    vertical-align: center;
+    margin: 5px;
+    width: 5vw;
+    text-decoration: none; 
+    cursor: pointer;
+}
+
+.backButton:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+.backButton-Link {
+    background-color: rgb(7, 89, 133);
     color: white;
     padding: 1px 4px;
     border-radius: 8px;
@@ -104,12 +142,7 @@
 }
 
 
-.loader{
-    padding: 4rem 0;
-}
-.loader img{
-    width: 120px;
-}
+
 
 .grid-container{
     display: grid;
@@ -204,6 +237,12 @@
     padding: 4px;
 }
 
+.header-buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .user-details-flex{
     display: flex;
     flex-direction:column;
@@ -256,3 +295,39 @@
     background-color: skyblue;
     
 }
+
+
+
+.read-later-icon {
+    position: absolute;
+    padding: 3px;
+    margin: 8px;
+    bottom: 1vh;
+    right: .5vh;
+    z-index: 1;
+    
+  }
+
+  .read-more-button {
+    border: 2px solid grey;
+    border-radius: 8px;
+    width: 8vw;
+    height: 4vh;
+    margin: 4px;
+    background-color:rgb(240, 240, 240)
+  }
+
+  .read-more-button:hover{
+    border: lightgrey;
+    background-color:rgb(226, 226, 226)
+  }
+
+  .books-marked{
+    padding: 24px;
+    margin: 12px;
+  }
+
+  .books-marked-title{
+    text-align: center;
+    display: block
+  }
