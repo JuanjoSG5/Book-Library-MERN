@@ -1,14 +1,13 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import BackButton from '../../components/BackButton'
-import axios from 'axios'
-import Spinner from '../../components/Spinner'
-import BookList from '../../components/BookList'
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import BackButton from '../../components/BackButton';
+import axios from 'axios';
+import Spinner from '../../components/Spinner';
+import BookList from '../../components/BookList';
 
 const ShowUser = () => {
-    const [user, setUser] = useState({})
-    const [loading, setLoading] = useState(false)
+    const [user, setUser] = useState({});
+    const [loading, setLoading] = useState(false);
     const { id } = useParams();
 
     useEffect(() => {
@@ -22,7 +21,8 @@ const ShowUser = () => {
                 console.log(error);
                 setLoading(false);
             });
-    }, [])
+    }, [id]);
+
     return (
         <div className='user-info'>
             <BackButton />
@@ -33,7 +33,6 @@ const ShowUser = () => {
                 ) : (
                     <>
                         <section className='user-details-flex'>
-
                             <div className='top-bottom-margin'>
                                 <span className='user-details-cell'>Username</span>
                                 <span>{user.username}</span>
@@ -42,17 +41,16 @@ const ShowUser = () => {
                                 <span className='user-details-cell'>Email</span>
                                 <span>{user.email}</span>
                             </div>
-
                         </section>
                         <section>
                             <h2 className='title books-marked-title'>Bookmarks</h2>
-                            <BookList useLocalStorage={true}  />
+                            <BookList useLocalStorage={true} />
                         </section>
                     </>
                 )
             }
         </div>
-    )
+    );
 }
 
-export default ShowUser
+export default ShowUser;

@@ -1,5 +1,6 @@
 import express from 'express';
 import UserEntity from '../models/UserModel.js';
+import { hash,compareSync } from 'bcrypt';
 
 const router = express.Router();
 
@@ -87,7 +88,7 @@ router.post('/', async (request, response) => {
             username: request.body.username,
             password: request.body.password,
             email: request.body.email,
-            admin: false // Set admin property based on your logic (e.g., default to false for new users)
+            admin: false 
         };
         const user = await UserEntity.create(newUser);
         return response.status(201).send(user);
@@ -97,6 +98,26 @@ router.post('/', async (request, response) => {
     }
 });
 
+
+router.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+  
+    try {
+      // Fetch user from the database based on the username
+      const user = await UserEntity.findOne({ username });
+  
+      if (user && compareSync(password, user.password)) {
+        // Passwords match, authentication successful
+        res.status(200).json({ success: true, user });
+      } else {
+        // Incorrect username or password
+        res.status(401).json({ success: false, message: "Incorrect username or password" });
+      }
+    } catch (error) {
+      console.log(error.message);
+      res.status(500).json({ success: false, message: "Internal Server Error" });
+    }
+  });
 
 
 export default router;

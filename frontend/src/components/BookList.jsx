@@ -9,11 +9,11 @@ const BookList = ({ useLocalStorage }) => {
     const itemsPerPage = 15;
     const [currentPage, setCurrentPage] = useState(1);
     const [shouldReload,setShouldReload] = useState(false)
-
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     const fetchBooks = () => {
         if (useLocalStorage) {
             // Fetch the books from local storage
-            return JSON.parse(localStorage.getItem('bookmarkedBooks')) || [];
+            return JSON.parse(localStorage.getItem(`bookmarkedBooks_${currentUser.username}`)) || [];
         } else {
             // Use books from the global context
             return books;
