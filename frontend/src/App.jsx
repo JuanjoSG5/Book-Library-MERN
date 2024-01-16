@@ -65,6 +65,15 @@ const App = () => {
           )
         }
       />
+      <Route path="/admin"
+        element={
+          userIsAdmin() ? (
+            <UserList />
+          ) : (
+            <Navigate to="/not-found" replace />
+          )
+        }
+      />
       <Route path="/user/edit/:id"
         element={
           userIsAdmin() ? (
