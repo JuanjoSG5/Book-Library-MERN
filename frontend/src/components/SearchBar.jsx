@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect,   } from 'react';
 import { useGlobalContext } from './../context.jsx';
 import "../css/main.css";
 import BookList from "./book/BookList.jsx";
+import ScrollToTop from "./buttons/ScrollToTop.jsx";
 
 
 
@@ -60,6 +61,7 @@ const SearchBar = () => {
             <section>
                 {loaded ? <BookList /> : ""}
             </section>
+            <ScrollToTop/>
         </div>
 
     );
