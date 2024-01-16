@@ -6,7 +6,7 @@ import "../css/main.css"
 
 const Home = () => {
     return (
-        <main className="border-margin">
+        <main >
             <Header />
             <Outlet />
             <Footer />

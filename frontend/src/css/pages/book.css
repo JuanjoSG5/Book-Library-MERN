@@ -7,27 +7,30 @@
     justify-content: center;
     align-items: center;
     margin: 8px;
-    padding: 8px;
-    border: 2px solid #ccc;
+    padding: 16px; /* Increased padding for better spacing */
+    border: 1px solid #b0b0b0; /* Slightly darker border for better contrast */
+    border-radius: 8px; /* Added rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
+    transition: box-shadow 0.3s ease; /* Adding a smooth transition effect for the shadow */
+}
 
-.book-details-img{
-    margin-right: 18vh;
+
+
+.book-details-img {
+    margin-right: 18px; /* Adjusted margin for better spacing */
     padding-left: 8px;
     align-items: center;
     width: 24vw;
-    
+    border-radius: 8px; /* Added rounded corners */
 }
 
-.book-details-item{
+.book-details-item {
     display: block;
-    padding:2px;
-    
+    padding: 8px; /* Increased padding for better spacing */
 }
 
-.book-details-content{
+.book-details-content {
     font-size: 2.5vh;
     width: 66%;
+    padding: 8px; /* Increased padding for better spacing */
 }

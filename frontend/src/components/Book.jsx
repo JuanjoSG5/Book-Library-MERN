@@ -8,8 +8,6 @@ const Book = ({ book }) => {
     return (
         <section className='book-content'>
             <article className='container'>
-                <BackButton />
-
                 <section className='book-content-flex grid'>
                     <img className="book-details-img" src={book?.cover_img} alt='cover img' />
                     <div className='book-details-info'>

@@ -12,10 +12,8 @@ const BookList = ({ useLocalStorage }) => {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     const fetchBooks = () => {
         if (useLocalStorage) {
-            // Fetch the books from local storage
             return JSON.parse(localStorage.getItem(`bookmarkedBooks_${currentUser.username}`)) || [];
         } else {
-            // Use books from the global context
             return books;
         }
     };
@@ -60,7 +58,7 @@ const BookList = ({ useLocalStorage }) => {
 
     return (
         <>
-            <section>
+            <section >
                 <div>
                     <h2 className='border-margin'>{resultTitle}</h2>
                     <div className="book-container border-margin">

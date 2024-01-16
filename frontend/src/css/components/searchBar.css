@@ -31,5 +31,21 @@
 .search-icon {
 
     right: 10px;
+    color: #0080ff;
     cursor: pointer;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin: 18px auto; /* Update margin to have auto for left and right */
+    width: 10vw;
+    border: 1px solid black;
+    border-radius: 12px;
+    align-items: center;
+}
+
+.filter-container-select {
+    border: none;
+    outline: none;
 }

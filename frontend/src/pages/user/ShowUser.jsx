@@ -4,6 +4,9 @@ import BackButton from '../../components/BackButton';
 import axios from 'axios';
 import Spinner from '../../components/Spinner';
 import BookList from '../../components/BookList';
+import "../../css/main.css";
+import LogoutButton from '../../components/LogoutButton';
+import Navbar from '../../components/Navbar';
 
 const ShowUser = () => {
     const [user, setUser] = useState({});
@@ -24,29 +27,27 @@ const ShowUser = () => {
     }, [id]);
 
     return (
-        <div className='user-info'>
-            <BackButton />
-            <h1 className='title'>User Details</h1>
+        <div className=''>
+            <Navbar />
+            
             {
                 loading ? (
                     <Spinner />
                 ) : (
-                    <>
-                        <section className='user-details-flex'>
-                            <div className='top-bottom-margin'>
-                                <span className='user-details-cell'>Username</span>
-                                <span>{user.username}</span>
-                            </div>
-                            <div className='top-bottom-margin'>
+                    <div className="border-margin">
+                        <h1 className='title'>User Details</h1>
+                        <section className='border-margin user-details-flex'>
+                                <span className=' user-details-cell'>Username</span>
+                                <span className='show-user-margin user-info-cell'>{user.username}</span>
                                 <span className='user-details-cell'>Email</span>
-                                <span>{user.email}</span>
-                            </div>
+                                <span className='show-user-margin user-info-cell'>{user.email}</span>
+                                <LogoutButton/>
                         </section>
                         <section>
                             <h2 className='title books-marked-title'>Bookmarks</h2>
                             <BookList useLocalStorage={true} />
                         </section>
-                    </>
+                    </div>
                 )
             }
         </div>

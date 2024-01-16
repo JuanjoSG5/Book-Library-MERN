@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className='holder'>
           <Navbar/>
-            <div >
+            <div className="border-margin">
                 <h2>Find your book of choice.</h2><br />
                 <p>This is just some random text that will be displayed explaining how does the search bar work </p>
                 <SearchBar />

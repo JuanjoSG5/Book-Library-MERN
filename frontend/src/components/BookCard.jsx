@@ -45,7 +45,6 @@ const BookCard = (book ) => {
             bookmarkedBooks.push(bookmarkedBook);
             localStorage.setItem(`bookmarkedBooks_${currentUser.username}`, JSON.stringify(bookmarkedBooks));
     
-            // Only call setShouldReload when the book is bookmarked and setShouldReload exists
             
         }
     };

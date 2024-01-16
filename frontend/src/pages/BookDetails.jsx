@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Spinner from '../components/Spinner';
-import coverImg from "../images/cover_not_found.jpg";
-import { useNavigate } from 'react-router-dom';
-import Book from '../components/Book';
-
-import '../css/pages/bookDetails.css'
-import Navbar from './Navbar';
+import Spinner from './../components/Spinner';
+import coverImg from "./../images/cover_not_found.jpg";
+import Book from './../components/Book';
+import './../css/main.css';
+import Navbar from '../components/Navbar';
 
 const URL = "https://openlibrary.org/works/";
 
@@ -48,6 +46,7 @@ const BookDetails = () => {
     if (loading) return <Spinner />;
 
     return (<>
+    <Navbar/>
         <Book className="book" book={book} />;
     </>
     )

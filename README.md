@@ -10,11 +10,11 @@ I really like reading and it can make it helpful to find good books that I enjoy
 
 ## Descipción de la aplicación
 
-The main idea is to create a simple searcher where you can search for books of an especific subject, and after logging in you can add them to your favorites.
+The aplication is a book library where the users can save the books that they are interested in, currently there are only 3 possibles ways to filter the books that you are searching by new, old or in a randomize order due how the API has it's endpoints 
 
 ## Descripcion de las páginas y funcionalidades a implementar
 
-For starters, the main page will be the searcher where you can search for books by their subject. I also want to add a favorite page to store your favorite books that can only be accessed after loggin in, if you aren't logged in and try to add it to your favorites it will lead to the log in page. 
+For starters, the main page will be the searcher where you can search for books by their subject. I also want to add a favorite page to store your favorite books that can only be accessed after loggin in, if you aren't logged in and try to add it to your favorites it will lead to the log in page.
 
 The log in page will be a simple log in page where you can log in or create an account.
 
