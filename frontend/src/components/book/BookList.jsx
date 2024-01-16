@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useGlobalContext } from '../context';
-import BookCard from './BookCard';
-import Spinner from '../components/Spinner';
-import coverImg from '../images/cover_not_found.jpg';
+import { useGlobalContext } from '../../context.jsx';
+import BookCard from './BookCard.jsx';
+import Spinner from '../Spinner.jsx';
+import coverImg from '../../images/cover_not_found.jpg';
 
 const BookList = ({ useLocalStorage }) => {
     const { books, loading,resultTitle } = useGlobalContext();

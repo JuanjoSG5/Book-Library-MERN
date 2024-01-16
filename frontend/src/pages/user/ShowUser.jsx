@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import BackButton from '../../components/BackButton';
+import BackButton from '../../components/buttons/BackButton.jsx';
 import axios from 'axios';
 import Spinner from '../../components/Spinner';
-import BookList from '../../components/BookList';
+import BookList from '../../components/book/BookList.jsx';
 import "../../css/main.css";
-import LogoutButton from '../../components/LogoutButton';
+import LogoutButton from '../../components/buttons/LogoutButton.jsx';
 import Navbar from '../../components/Navbar';
 
 const ShowUser = () => {

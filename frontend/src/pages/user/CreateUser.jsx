@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import BackButton from '../../components/BackButton';
+import BackButton from '../../components/buttons/BackButton.jsx';
 import Spinner from '../../components/Spinner';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import LoginButton from './../../components/LogInButton.jsx';
+import LoginButton from '../../components/buttons/LogInButton.jsx';
 
 const CreateUser = () => {
   const [username, setUsername] = useState('');

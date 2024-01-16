@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { BsArrowLeft } from 'react-icons/bs';
-import '../css/main.css';
+import '../../css/main.css';
 
 const BackButton = () => {
   const navigate = useNavigate();

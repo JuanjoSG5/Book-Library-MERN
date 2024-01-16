@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { IoBookmarkOutline } from "react-icons/io5";
 import { FaBookmark } from 'react-icons/fa';
-import '../css/main.css';
+import '../../css/main.css';
 
 const BookCard = (book ) => {
     const [isBookmarked, setIsBookmarked] = useState(false);

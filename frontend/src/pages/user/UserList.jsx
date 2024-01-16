@@ -5,7 +5,7 @@ import './../../css/main.css';
 
 import UserTable from '../../components/user/UserTable';
 import UserCard from '../../components/user/UserCard';
-import RegisterButton from '../../components/RegisterButton';
+import RegisterButton from '../../components/buttons/RegisterButton.jsx';
 
 const UserList = () => {
     const [users, setUsers] = useState([])

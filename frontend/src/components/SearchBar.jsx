@@ -2,7 +2,7 @@ import { FaSearch } from "react-icons/fa";
 import React, { useState, useRef, useEffect,   } from 'react';
 import { useGlobalContext } from './../context.jsx';
 import "../css/main.css";
-import BookList from "./BookList.jsx";
+import BookList from "./book/BookList.jsx";
 
 
 

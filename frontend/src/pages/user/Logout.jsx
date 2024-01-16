@@ -1,7 +1,7 @@
 // Logout.jsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import BackButton from '../../components/BackButton';
+import BackButton from '../../components/buttons/BackButton.jsx';
 
 const Logout = () => {
   const navigate = useNavigate();

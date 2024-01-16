@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BackButton from '../components/BackButton';
+import BackButton from '../components/buttons/BackButton.jsx';
 import './../css/main.css';
 
 const ContactPage = () => {

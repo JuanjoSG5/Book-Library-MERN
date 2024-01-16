@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Spinner from './Spinner';
+import Spinner from '../Spinner.jsx';
 
 const UserDetailsButton = () => {
     const [user, setUser] = useState(null);  // Change here

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Spinner from './../components/Spinner';
 import coverImg from "./../images/cover_not_found.jpg";
-import Book from './../components/Book';
+import Book from '../components/book/Book.jsx';
 import './../css/main.css';
 import Navbar from '../components/Navbar';
 
