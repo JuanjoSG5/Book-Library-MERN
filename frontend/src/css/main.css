@@ -9,11 +9,23 @@
 @import url("./pages/showUser.css");
 @import url("./components/scrollToTop.css");
 @import url("./pages/logout.css");
+@import url("./components/footer.css");
 
 * {
 	margin:0;
 	padding:0;
 	box-sizing:border-box
+}
+
+
+.site-content-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-content {
+    flex: 1;
 }
 
 .users-table{
@@ -123,7 +135,7 @@
 .backButton-flex {
     display: flex;
     align-items: flex-start; 
-    margin-right:80vw;
+    margin-right:66vw;
     margin-left: 16px;
     margin-top: 8px;
 }
@@ -254,10 +266,27 @@
     justify-content: flex-end;
     align-items: center;
     background: lightgray;
-    padding: 10px; 
+    padding: 10px;
+  }
+
+  .login-register-page {
+    margin-left: 40%;
 }
 
+.login-register-button {
+    display: block;
+    height: 6vh;
+    width: 8vw;
+}
+.login-register-text{
+    margin-left:16px;
+}
 
+.login-register-button .login-button {
+
+    margin-right: 90vw;
+    width: 15vw;
+}
 
 
 .register-user{
@@ -290,12 +319,27 @@
     width: 100%;
 }
 
-.submit-button{
-    padding:2px;
+.submit-button {
+    display: block;
+    border: 2px solid #b0b0b0;
+    border-radius: 18px;
+    color: #333333; 
+    font-weight: bolder;
+    font-size:18px;
+    background-color: #f5f5f5;
+    text-align: center;
+    line-height: 50px; /* Adjust as needed */
+    justify-content: center; /* This property is for flex containers */
     margin: 8px;
-    background-color: skyblue;
-    
+    width: auto; /* You can specify the width or let it adjust based on content */
+    text-decoration: none;
+    transition: background-color 0.3s ease; 
+    cursor: pointer;
 }
+
+.submit-button:hover {
+    background-color: #9f9f9f;
+  }
 
 
 

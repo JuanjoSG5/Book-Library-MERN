@@ -6,11 +6,14 @@ import "../css/main.css"
 
 const Home = () => {
     return (
-        <main >
-            <Header />
-            <Outlet />
+        <div className="site-content-section">
+            <main className="site-content">
+                <Header />
+                <Outlet />
+            </main>
             <Footer />
-        </main>
+
+        </div>
     )
 }
 

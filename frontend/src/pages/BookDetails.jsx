@@ -5,6 +5,7 @@ import coverImg from "./../images/cover_not_found.jpg";
 import Book from '../components/book/Book.jsx';
 import './../css/main.css';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.jsx';
 
 const URL = "https://openlibrary.org/works/";
 
@@ -46,8 +47,9 @@ const BookDetails = () => {
     if (loading) return <Spinner />;
 
     return (<>
-    <Navbar/>
+        <Navbar />
         <Book className="book" book={book} />;
+        <Footer/>
     </>
     )
 }

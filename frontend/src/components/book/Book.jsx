@@ -1,8 +1,5 @@
 import React from 'react';
-import BackButton from '../buttons/BackButton.jsx';
-
 import '../../css/pages/book.css'
-// TODO: import the book css to the main css file
 
 const Book = ({ book }) => {
     return (

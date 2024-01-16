@@ -4,6 +4,7 @@ import Spinner from '../../components/Spinner';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import LoginButton from '../../components/buttons/LogInButton.jsx';
+import "../../css/main.css"
 
 const CreateUser = () => {
   const [username, setUsername] = useState('');
@@ -12,10 +13,10 @@ const CreateUser = () => {
   const [admin, setAdmin] = useState(false); // Default to false for checkbox
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  
+
   const createNewUser = () => {
-    
-  
+
+
     const data = {
       username,
       email,
@@ -92,10 +93,11 @@ const CreateUser = () => {
           Register
         </button>
       </section>
-      <section>
-        Already registered Log in with
-        <LoginButton />
+      <section className='login-register-page'>
+        <span className='login-register-text'>Already registered? Log in here</span>
+        <span className='login-register-button'><LoginButton /></span>
       </section>
+
     </div>
   );
 };

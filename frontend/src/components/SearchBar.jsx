@@ -34,7 +34,7 @@ const SearchBar = () => {
     };
 
     return (
-        <div >
+        <div>
             <div>
                 <div>
                     <form className="search-form search-form-image" onSubmit={handleSubmit}>

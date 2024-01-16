@@ -1,8 +1,11 @@
 import React from 'react'
+import "./../css/main.css"
 
 const Footer = () => {
   return (
-    <div className="border-margin">Footer</div>
+      <section className="site-footer">
+        <p>2024 BookVault. All rights reserved</p>
+      </section>
   )
 }
 
