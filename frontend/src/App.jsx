@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import UserList from './pages/User/UserList';
-import CreateUser from './pages/User/CreateUser';
+import CreateUser from './pages/user/CreateUser';
 import DeleteUser from './pages/user/DeleteUser';
 import EditUser from './pages/User/EditUser';
 import ShowUser from './pages/user/ShowUser';
@@ -22,7 +22,12 @@ const App = () => {
   }
 
   const userIsAdmin = () => {
-    return user.admin
+    const userIsAdmin = user === null 
+                            ? false 
+                            : (
+                              user.admin ? true : false
+                            )
+    return userIsAdmin
   }
 
   return (
@@ -34,7 +39,7 @@ const App = () => {
           userIsLoggedIn() ? (
             <Home />
           ) : (
-            <Navigate to="/not-found" replace />
+            <Navigate to="/" replace />
           )
         }
       />
@@ -43,7 +48,7 @@ const App = () => {
           userIsLoggedIn() ? (
             <BookDetails />
           ) : (
-            <Navigate to="/not-found" replace />
+            <Navigate to="/" replace />
           )
         }
       />
@@ -52,7 +57,7 @@ const App = () => {
           userIsLoggedIn() ? (
             <Logout />
           ) : (
-            <Navigate to="/not-found" replace />
+            <Navigate to="/" replace />
           )
         }
       />
@@ -61,7 +66,7 @@ const App = () => {
           userIsLoggedIn() ? (
             <ContactPage />
           ) : (
-            <Navigate to="/not-found" replace />
+            <Navigate to="/" replace />
           )
         }
       />
@@ -70,7 +75,7 @@ const App = () => {
           userIsAdmin() ? (
             <UserList />
           ) : (
-            <Navigate to="/not-found" replace />
+            <Navigate to="/" replace />
           )
         }
       />
@@ -79,7 +84,7 @@ const App = () => {
           userIsAdmin() ? (
             <EditUser />
           ) : (
-            <Navigate to="/not-found" replace />
+            <Navigate to="/" replace />
           )
         }
       />
@@ -88,7 +93,7 @@ const App = () => {
           userIsAdmin() ? (
             <DeleteUser />
           ) : (
-            <Navigate to="/not-found" replace />
+            <Navigate to="/" replace />
           )
         }
       />
@@ -97,12 +102,11 @@ const App = () => {
           userIsAdmin() ? (
             <ShowUser />
           ) : (
-            <Navigate to="/not-found" replace />
+            <Navigate to="/" replace />
           )
         }
       />
 
-      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
