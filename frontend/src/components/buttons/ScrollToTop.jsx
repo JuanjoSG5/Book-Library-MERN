@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
 
+import React, { useState, useEffect } from 'react';
 import { IoIosArrowUp } from 'react-icons/io';
-import "../../css/main.css"
+import '../../css/main.css';
 
 const ScrollToTop = () => {
   const [showButton, setShowButton] = useState(false);
@@ -12,13 +12,15 @@ const ScrollToTop = () => {
       const isAtBottom = scrollPosition >= document.body.offsetHeight;
       setShowButton(isAtBottom);
     };
+
     window.addEventListener('scroll', handleScroll);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const scrollToBottom = () => {
+  const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -26,13 +28,11 @@ const ScrollToTop = () => {
   };
 
   return (
-    <button className='scroll-to-top'
-      style={{
-        display: showButton ? 'block' : 'none',
-      }}
-      onClick={scrollToBottom}
+    <button
+      className={`scroll-to-top ${showButton ? 'show' : ''}`}
+      onClick={scrollToTop}
     >
-      <IoIosArrowUp/>
+      <IoIosArrowUp />
     </button>
   );
 };

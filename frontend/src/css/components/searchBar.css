@@ -38,7 +38,7 @@
 .filter-container {
     display: flex;
     justify-content: center;
-    margin: 18px auto; /* Update margin to have auto for left and right */
+    margin: 18px auto;
     width: 10vw;
     border: 1px solid black;
     border-radius: 12px;
@@ -48,4 +48,6 @@
 .filter-container-select {
     border: none;
     outline: none;
+    font-size: 16px;
+    padding:6px
 }

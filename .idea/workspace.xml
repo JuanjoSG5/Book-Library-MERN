@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b27da84e-3703-44b9-ad3e-65a59847e297" name="Changes" comment="Finished CRUD User">
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/EditUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/EditUser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/css/components/logIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/css/components/logIn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/css/components/searchBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/css/components/searchBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/Juan/Desktop/DAW/CLIENTE/REACT/API-CLIENTE-SERVIDOR",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -58,6 +60,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Juan\Desktop\DAW\CLIENTE\REACT\API-CLIENTE-SERVIDOR\frontend\src\components\buttons" />
+      <recent name="C:\Users\Juan\Desktop\DAW\CLIENTE\REACT\API-CLIENTE-SERVIDOR\frontend\src\components\book" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -71,6 +79,7 @@
       <workItem from="1703652141897" duration="1097000" />
       <workItem from="1703683140146" duration="38000" />
       <workItem from="1703848237640" duration="455000" />
+      <workItem from="1705396510469" duration="641000" />
     </task>
     <task id="LOCAL-00001" summary="Finished CRUD User">
       <option name="closed" value="true" />

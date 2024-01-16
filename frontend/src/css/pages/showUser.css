@@ -1,13 +1,13 @@
 .user-details-flex {
     display: flex;
     width: 300px;
-    border: 1px solid #b0b0b0; /* Slightly darker border for better contrast */
-    background-color: #f5f5f5; /* Light background color */
+    border: 1px solid #b0b0b0;
+    background-color: #f5f5f5;
     flex-direction: column;
     padding: 15px;
-    border-radius: 8px; /* Added rounded corners */
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Added margin at the bottom for spacing */
+    margin-bottom: 20px;
 }
 
 .show-user-margin {
@@ -16,19 +16,15 @@
     margin-bottom: 12px;
 }
 
-
-
-
-
 .user-details-cell {
     font-weight: bold;
-    font-size:  20px;
-    line-height:  28px;
+    font-size: 20px;
+    line-height: 28px;
     margin-right: 4px;
     color: rgb(75, 78, 83);
 }
 
 .user-details-title {
-    color: #1f1e1e; /* Adjusted title color for better readability */
+    color: #1f1e1e;
     margin-bottom: 10px;
 }

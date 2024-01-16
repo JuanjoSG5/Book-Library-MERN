@@ -8,6 +8,7 @@
 @import url("./components/contact.css");
 @import url("./pages/showUser.css");
 @import url("./components/scrollToTop.css");
+@import url("./pages/logout.css");
 
 * {
 	margin:0;
@@ -65,7 +66,6 @@
     color: black;
 }
 
-/* Container for the book items */
 .book-container {
     display: flex;
     flex-wrap: wrap;
@@ -75,24 +75,21 @@
   
   .book-card {
     width: 15vw;
-    border: 1px solid #b0b0b0; /* Slightly darker border for better contrast */
-    background-color: #f5f5f5; /* Light background color */
-    padding: 15px; /* Increased padding for better spacing */
+    border: 1px solid #b0b0b0;
+    background-color: #f5f5f5; 
+    padding: 15px; 
     text-align: center;
-    border-radius: 8px; /* Added rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease; /* Adding a smooth transition effect for the shadow */
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease; 
        
       
 }
 
 .book-card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly darker shadow on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
 }
 
-
-  
-  /* Additional styling for book images within the card */
   .book-card img {
     max-width: 10vw;
     height: 30vh;
@@ -125,8 +122,10 @@
 
 .backButton-flex {
     display: flex;
-    align-items: flex-start; /* Align items to the start (left) of the container */
+    align-items: flex-start; 
     margin-right:80vw;
+    margin-left: 16px;
+    margin-top: 8px;
 }
 
 .backButton{
@@ -255,7 +254,7 @@
     justify-content: flex-end;
     align-items: center;
     background: lightgray;
-    padding: 10px; /* Reduced the padding for a more compact header */
+    padding: 10px; 
 }
 
 

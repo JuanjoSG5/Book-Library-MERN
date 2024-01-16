@@ -12,13 +12,16 @@ const Logout = () => {
   };
 
   return (
-    
-    <div>
-      <BackButton/>
-      <h1>Logout Page</h1>
-      <p>Are you sure you want to log out?</p>
-      <button onClick={handleLogout}>Logout</button>
-    </div>
+    <>
+      <BackButton />
+      <section className="centered-container">
+        <div className="logout-container">
+          <h1 className="logout-title">Logout</h1>
+          <h3 className="logout-subtitle">Are you sure you want to log out?</h3>
+          <button className='logout-button' onClick={handleLogout}>Logout</button>
+        </div>
+      </section>
+    </>
   );
 };
 

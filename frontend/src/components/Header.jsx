@@ -7,8 +7,7 @@ const Header = () => {
     <div className='holder'>
           <Navbar/>
             <div className="border-margin">
-                <h2>Find your book of choice.</h2><br />
-                <p>This is just some random text that will be displayed explaining how does the search bar work </p>
+                <h2 className="title">Find your book of choice.</h2>
                 <SearchBar />
             </div>
         

@@ -1,18 +1,23 @@
+
 .scroll-to-top {
     position: fixed;
     border: 1px solid lightgray;
     background-color: rgb(230, 230, 230);
     border-radius: 25px;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
     padding: 10px;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   }
   
   .scroll-to-top:hover {
     background-color: rgb(159, 159, 159);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   }
   
+  .scroll-to-top.show {
+    opacity: 1;
+  }
