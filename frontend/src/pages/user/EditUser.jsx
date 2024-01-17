@@ -4,17 +4,21 @@ import Spinner from '../../components/Spinner'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
 
+
+
 const EditUser = () => {
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 	const [admin, setAdmin] = useState('')
     const [loading, setLoading] = useState(false)
+	const url = process.env.VITE_DATABASE_URL;
+
     const navigate = useNavigate()
     const {id} = useParams()
     useEffect(() =>{
       setLoading(true)
-      axios.get(`http://localhost:5555/users/${id}`)
+      axios.get(`${url}/${id}`)
       .then((response) =>{
         setUsername(response.data.username)
         setEmail(response.data.email)
@@ -37,7 +41,7 @@ const EditUser = () => {
         };
         setLoading(true)
         axios
-            .put(`http://localhost:5555/users/${id}`, data)
+            .put(`${url}/${id}`, data)
 			.then(() => {
 				setLoading(false);
 				navigate('/')

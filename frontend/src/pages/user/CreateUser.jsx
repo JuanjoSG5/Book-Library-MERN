@@ -6,6 +6,9 @@ import { useNavigate } from 'react-router-dom';
 import LoginButton from '../../components/buttons/LogInButton.jsx';
 import "../../css/main.css"
 
+
+
+
 const CreateUser = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -15,7 +18,6 @@ const CreateUser = () => {
   const navigate = useNavigate();
 
   const createNewUser = () => {
-
 
     const data = {
       username,
@@ -33,7 +35,7 @@ const CreateUser = () => {
     setLoading(true);
 
     axios
-      .post('http://localhost:5555/users/', data)
+      .post(`${import.meta.env.VITE_DATABASE_URL}`, data)
       .then(() => {
         setLoading(false);
         localStorage.removeItem('currentUser');

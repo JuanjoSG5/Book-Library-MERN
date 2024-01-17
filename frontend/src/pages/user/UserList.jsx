@@ -7,14 +7,19 @@ import UserTable from '../../components/user/UserTable';
 import UserCard from '../../components/user/UserCard';
 import RegisterButton from '../../components/buttons/RegisterButton.jsx';
 
+
+
+
 const UserList = () => {
+    const url = process.env.VITE_DATABASE_URL;
     const [users, setUsers] = useState([])
     const [loading, setLoading] = useState(false)
     const [showType, setShowType] = useState('table')
+
     useEffect(() => {
         setLoading(true);
         axios
-            .get('http://localhost:5555/users')
+            .get(`${url}`)
             .then((response) => {
                 setUsers(response.data.data);
                 setLoading(false);

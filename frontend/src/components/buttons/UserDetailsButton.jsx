@@ -3,15 +3,19 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Spinner from '../Spinner.jsx';
 
+
 const UserDetailsButton = () => {
     const [user, setUser] = useState(null);  // Change here
     const [loading, setLoading] = useState(false);
     const currentUserData = JSON.parse(localStorage.getItem('currentUser'));
+    const url = process.env.VITE_DATABASE_URL;
+
+
 
     useEffect(() => {
         setLoading(true);
         axios
-            .get('http://localhost:5555/users')
+            .get(`${url}`)
             .then((response) => {
                 const filteredUsers = response.data.data.filter(user => user.username === currentUserData.username);
                 setUser(filteredUsers.length > 0 ? filteredUsers[0] : null);  // Change here

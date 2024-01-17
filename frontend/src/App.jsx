@@ -10,7 +10,6 @@ import Login from './pages/user/Login';
 import Home from './pages/Home';
 import BookDetails from './pages/BookDetails';
 import ContactPage from './pages/ContactPage';
-import NotFound from './pages/NotFound';
 
 const App = () => {
   const userString = localStorage.getItem('currentUser');
@@ -33,80 +32,15 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<CreateUser />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/home"
-        element={
-          userIsLoggedIn() ? (
-            <Home />
-          ) : (
-            <Navigate to="/" replace />
-          )
-        }
-      />
-      <Route path="book/:id"
-        element={
-          userIsLoggedIn() ? (
-            <BookDetails />
-          ) : (
-            <Navigate to="/" replace />
-          )
-        }
-      />
-      <Route path="/logout"
-        element={
-          userIsLoggedIn() ? (
-            <Logout />
-          ) : (
-            <Navigate to="/" replace />
-          )
-        }
-      />
-      <Route path="/contact"
-        element={
-          userIsLoggedIn() ? (
-            <ContactPage />
-          ) : (
-            <Navigate to="/" replace />
-          )
-        }
-      />
-      <Route path="/admin"
-        element={
-          userIsAdmin() ? (
-            <UserList />
-          ) : (
-            <Navigate to="/" replace />
-          )
-        }
-      />
-      <Route path="/user/edit/:id"
-        element={
-          userIsAdmin() ? (
-            <EditUser />
-          ) : (
-            <Navigate to="/" replace />
-          )
-        }
-      />
-      <Route path="/user/delete/:id"
-        element={
-          userIsAdmin() ? (
-            <DeleteUser />
-          ) : (
-            <Navigate to="/" replace />
-          )
-        }
-      />
-      <Route path="/user/details/:id"
-        element={
-          userIsAdmin() ? (
-            <ShowUser />
-          ) : (
-            <Navigate to="/" replace />
-          )
-        }
-      />
-
+      <Route path="/home" element = {<Home />} />
+      <Route path="book/:id" element = {<BookDetails />} />
+      <Route path="/admin" element={<UserList />} />
+      <Route path="/login" element = {<Login />} />
+      <Route path="/logout" element={<Logout />} />
+      <Route path="/contact" element={<ContactPage/>}/>
+      <Route path="/user/edit/:id" element={<EditUser />} />
+      <Route path="/user/delete/:id" element={<DeleteUser />} />
+      <Route path="/user/details/:id" element={<ShowUser />} />
     </Routes>
   );
 };

@@ -4,14 +4,18 @@ import Spinner from '../../components/Spinner'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
 
+
+
 const DeleteUser = () => {
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
   const {id} = useParams()
+  const url = process.env.VITE_DATABASE_URL;
+
   const handleDeleteUser = () => {
     setLoading(true)
     axios
-      .delete(`http://localhost:5555/users/${id}`)
+      .delete(`${url}/${id}`)
       .then(() =>{
         setLoading(false)
         navigate('/')

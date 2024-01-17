@@ -1,24 +1,17 @@
-import express from "express";
 import { MongoDBURL, PORT } from "./config.js";
 import mongoose from "mongoose";
-import userRoute from "./routes/UserRoutes.js"
-import cors from 'cors'
+import userRoute from "./routes/UserRoutes.js";
+
+// Change the following two lines
+import express from 'express';
+import cors from 'cors';
 
 const app = express();
 
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 
-app.use(cors())
-
-// app.use(
-//     cors({
-//         origin: 'https://localhost:5173',
-//         method: ['GET', 'POST', 'PUT', 'DELETE'],
-//         allowedHeaders: ['Content-Type']
-//     })
-// )
-
-app.use('/users', userRoute)
+app.use('/users', userRoute);
 
 mongoose
     .connect(MongoDBURL)
@@ -26,9 +19,7 @@ mongoose
         app.listen(PORT, () => {
             console.log("listening");
         });
-        
     })
     .catch(err => {
         console.log(err);
-    })
-
+    });

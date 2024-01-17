@@ -4,39 +4,51 @@ import axios from 'axios';
 import "./../../css/main.css";
 import Navbar from "./../../components/Navbar"
 
+
+
+
 const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({ username: '', password: '' });
   const [loading, setLoading] = useState(false);
+  const url = process.env.VITE_DATABASE_URL;
+
   const navigate = useNavigate();
 
   const usernameRef = useRef(null);
   const passwordRef = useRef(null);
 
   const handleLogin = () => {
+    console.log('Entering handleLogin function');
+    console.log('Username:', username.trim());
+    console.log('Password:', password.trim());
     const newErrors = {};
-
-    if (!username.trim()) {
+  
+    if (username.trim() === '') {
       newErrors.username = 'Username is required';
       usernameRef.current.focus();
     }
-
-    if (!password.trim()) {
+  
+    if (password.trim() === '') {
       newErrors.password = 'Password is required';
       passwordRef.current.focus();
     }
-
-    if (Object.keys(newErrors).length === 0) {
+  
+    console.log('New Errors:', newErrors);
+  
+    if (Object.keys(newErrors).length === 0 && username.trim() !== null) {
+      console.log('Making API call');
       setLoading(true);
       axios
-        .post('http://localhost:5555/users/login', { username, password })
+        .post(`${url}/login`, { username, password })
         .then((response) => {
-          if (response.data.success) {
+          console.log('API Response:', response.data);
+          if (response.data && response.data.success) {
             localStorage.setItem('currentUser', JSON.stringify(response.data.user));
             navigate('/home');
           } else {
-            alert(response.data.message);
+            alert(response.data ? response.data.message : 'Unexpected response format');
           }
         })
         .catch((error) => {
@@ -46,14 +58,16 @@ const LoginPage = () => {
         .finally(() => {
           setLoading(false);
         });
-
+  
       setUsername('');
       setPassword('');
       setErrors({ username: '', password: '' });
     } else {
+      console.log('Errors detected, not making API call');
       setErrors(newErrors);
     }
   };
+  
 
   return (
     <>
